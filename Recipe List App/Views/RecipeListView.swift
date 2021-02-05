@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MainWindowView: View {
+struct RecipeListView: View {
     
     // Properties
     @ObservedObject var mainWindowViewModel = MainWindowViewModel()
@@ -33,6 +33,6 @@ struct MainWindowView: View {
 
 struct MainWindowView_Previews: PreviewProvider {
     static var previews: some View {
-        MainWindowView()
+        RecipeListView()
     }
 }
