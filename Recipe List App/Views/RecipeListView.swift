@@ -2,8 +2,7 @@ import SwiftUI
 
 struct RecipeListView: View {
     
-    // Properties
-    @ObservedObject var mainWindowViewModel = MainWindowViewModel()
+    @EnvironmentObject var mainWindowViewModel: MainWindowViewModel // This property is populated by the instance of MainWindowViewModel() created in RecipeTabView
     
     var body: some View {
 
