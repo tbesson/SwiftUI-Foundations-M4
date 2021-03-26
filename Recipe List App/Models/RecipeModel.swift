@@ -12,11 +12,19 @@ class RecipeModel: Identifiable, Decodable {
     var cookTime: String
     var totalTime: String
     var servings: Int
-    var ingredients: [String]
+    var highlights: [String]
+    var ingredients: [Ingredient]
     var directions: [String]
+
+}
+
+class Ingredient: Identifiable, Decodable {
+    // Identifiable makes the class work in a SwiftUI List
+    // Decodable lets us apply the Decodable protocol
     
-    // Initializers
-    
-    // Methods
-    
+    var id: UUID? // We need this because we are using the Identifiable protocol
+    var name: String
+    var num: Int?
+    var denom: Int?
+    var unit: String?
 }
